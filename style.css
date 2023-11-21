@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+  }
+  
+  .shooting-star {
+    clip-path: polygon(
+      50% 0%,
+      61% 35%,
+      98% 35%,
+      68% 57%,
+      79% 91%,
+      50% 70%,
+      21% 91%,
+      32% 57%,
+      2% 35%,
+      39% 35%
+    );
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    transform-origin: center center;
+    animation: shooting-star-animation linear infinite;
+    filter: blur(1rem);
+  }
+  
+  @keyframes shooting-star-animation {
+    0%, 100% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 0.1;
+    }
+    30%, 90% {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 1.0;
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0.0;
+    }
+  }
