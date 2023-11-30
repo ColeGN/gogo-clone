@@ -740,7 +740,7 @@ main{
         height: 100px;
         margin: 0;
         background-color: bisque;
-        border: 1px solid rgb(27, 26, 26);
+        border: 1px solid #fff;
     }
 }
  .reclams{
@@ -1087,13 +1087,29 @@ main{
     border-radius: 10px;
     border: 1px solid #f1f1f1;
     position: relative;
+    overflow: hidden;
+}
+.image-container{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    position: relative;
+   overflow: hidden;
+}
+.useless1:hover .lazer1-link{
+    opacity: 1;
 }
 .useless1 img{
     width: 100%;
     height: 250px;
     border-radius: 10px;
+    overflow: hidden;
+    object-fit: cover;
+    transition: transform 0.5s;
 }
-
+.useless1:hover .useless-image{
+    transform: scale(1.2);
+}
 .icon2{
     width: 20px;
     color: #c6c6c6;
@@ -1120,9 +1136,14 @@ main{
     border-radius: 10px;
     border: 1px solid #f1f1f1;
     position: relative;
+    overflow: hidden;
 }
-.enjoy-link1{
+.useless2:hover .useless-image{
+    transform: scale(1.2);
+}
+/* .enjoy-link1{
     position: absolute;
+    height: 100px;
     background-color: rgb(0, 0, 0 , 0.5);
     inset: 0;
     color: white;
@@ -1132,8 +1153,22 @@ main{
     border-radius: 10px;
     opacity: 0;
     transition: opacity 0.5s;
+} */
+.lazer1-link{
+        height: 250px;
+        width: 100%;
+        position: absolute;
+        inset: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background-color: rgb(0, 0, 0 , 0.5);
+        border-radius: 10px;
+        opacity: 0;
+        transition: opacity 0.5s;
 }
-.useless2:hover .enjoy-link{
+.useless2:hover .lazer1-link{
     opacity: 1;
 }
 .useless2 p{
@@ -1143,7 +1178,9 @@ main{
     width: 100%;
     height: 250px;
     border-radius: 10px;
-    position: relative;
+    overflow: hidden;
+    object-fit: cover;
+    transition: transform 0.5s;
 }
 .useless3{
     display: none;
@@ -1186,9 +1223,13 @@ main{
         height: 360px;
         border-radius: 10px;
         border: 1px solid #f1f1f1;
-        overflow: hidden;
         position: relative;
+        overflow: hidden;
     }
+    .useless3:hover .lazer1-link{
+        opacity: 1;
+    }
+    
     .icon3{
         display: inline;
         position: absolute;
@@ -1211,6 +1252,12 @@ main{
         width: 100%;
         height: 250px;
         border-radius: 10px;
+        overflow: hidden;
+        object-fit: cover;
+        transition: transform 0.5s;
+    }
+    .useless3:hover .useless-image{
+        transform: scale(1.2);
     }
     .useless3 p{
         margin: 0;
@@ -1225,6 +1272,10 @@ main{
         height: 360px;
         border-radius: 10px;
         border: 1px solid #f1f1f1;
+        position: relative;
+    }
+    .useless4:hover .lazer1-link{
+        opacity: 1;
     }
     .paragraph2{
         width: 100%;
@@ -1260,6 +1311,9 @@ main{
     width: 100%;
     height: 180px;
     border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.5s;
+    overflow: hidden;
 }
 .hyundai1 p{
     width: 100%;
@@ -1268,8 +1322,35 @@ main{
     margin: 0;
     padding: 5px;
     overflow: hidden;text-overflow: ellipsis;
-
 }
+.hyundai1:hover .tech-image{
+    transform: scale(1.2);
+}
+.tech-link{
+    height: 180px;
+    width: 100%;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgb(0, 0, 0 , 0.5);
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.tech-container{
+    height: 180px;
+    width: 100%;
+    display: flex;
+    position: relative;
+   overflow: hidden;
+}
+.hyundai1:hover .tech-link{
+    opacity: 1;
+}
+
 .hyundai{
     display: flex;
     justify-content: center;
@@ -1281,6 +1362,8 @@ main{
     height: 320px;
     border-radius: 10px;
     border: 1px solid #f1f1f1;
+    position: relative;
+    overflow: hidden;
 }
 .hyundai2{
    display: none;
@@ -1300,6 +1383,11 @@ main{
         border-radius: 10px;
         margin-right: auto;
         border: 1px solid #f1f1f1;
+        overflow: hidden;
+        position: relative;
+    }
+    .hyundai2:hover .tech-link{
+        opacity: 1;
     }
     .icon5{
         display: inline;
@@ -1315,6 +1403,11 @@ main{
             width: 100%;
             height: 180px;
             border-radius: 10px;
+            object-fit: cover;
+            transition: transform 0.5s;
+    }
+    .hyundai2:hover .tech-image{
+        transform: scale(1.2);
     }
     .hyundai2 p{
         width: 100%;
@@ -1335,11 +1428,21 @@ main{
         border-radius: 10px;
         margin-right: auto;
         border: 1px solid #f1f1f1;
+        overflow: hidden;
+        position: relative;
     }
     .hyundai3 img{
         width: 100%;
         height: 180px;
-        border-radius: 10px
+        border-radius: 10px;
+        object-fit: cover;
+        transition: transform 0.5s;
+    }
+    .hyundai3:hover .tech-image{
+        transform: scale(1.2);
+    }
+    .hyundai3:hover .tech-link{
+        opacity: 1;
     }
     .hyundai3 p{
         width: 100%;
