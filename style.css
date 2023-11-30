@@ -113,7 +113,11 @@ body{
     }
     .main-menu{
         display: flex;
-
+        position: relative;
+        transition: all 1s,;
+    }
+    .main-menu:hover .sub-menu{
+        opacity: 1;
     }
     .wallet a{
         text-decoration: none;
@@ -126,7 +130,155 @@ body{
     }
     .menu{
         display: none;
-}
+    }
+    .corner:hover .sub-corner{
+        opacity: 1;
+    }
+    .corner{
+        display: flex;
+        position: relative;
+        transition: all 1s;
+    }
+    .watch{
+        display: flex;
+        position: relative;
+        transition: all 1s;
+    }
+    .sub-watch{
+        position: absolute;
+        display: grid;
+        margin-top: 20px;
+        row-gap: 20px;
+        box-sizing: border-box;
+        padding: 25px;
+        background: #fff;
+        color: #666;
+        border-radius: 10px;
+        opacity: 0;
+        transition: opacity 1s;
+    }
+    .sub-watch p{
+        margin: 0;
+        color: #000;
+        font-size: 16px;
+    }
+    .watch:hover .sub-watch{
+        opacity: 1;
+    }
+    .sub-corner{
+        position: absolute;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        margin-top: 20px;
+        row-gap: 20px;
+        box-sizing: border-box;
+        padding: 25px;
+        background: #fff;
+        color: #666;
+        border-radius: 10px;
+        opacity: 0;
+        transition: opacity 1s;
+    }
+    .sub-corner p{
+        margin: 0;
+        color: #000;
+        font-size: 16px;
+    }
+    .main-style{
+        display: flex;
+        position: relative;
+        transition: all 1s;
+    }
+    .sub-style{
+        position: absolute;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        margin-top: 20px;
+        row-gap: 20px;
+        box-sizing: border-box;
+        padding: 25px;
+        background: #fff;
+        color: #666;
+        border-radius: 10px;
+        opacity: 0;
+        transition: opacity 1s;
+    }
+    .main-style:hover .sub-style{
+        opacity: 1;
+    }
+    .sub-style p{
+        margin: 0;
+        color: #000;
+        font-size: 16px;
+    }
+    .sub-menu{
+        position: absolute;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+        row-gap: 10px;
+        margin-top: 20px;
+        z-index: 1020;
+        box-sizing: border-box;
+        min-width: 200px;
+        padding: 25px;
+        background: #fff;
+        color: #666;
+        height: 220px;
+        width: 400px;
+        border-radius: 10px;
+        opacity: 0;
+        transition: opacity 1s;
+    }
+    .after{
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    .after::after{
+        content: "";
+    background-color: #297cf0;
+    border-radius: 50%;
+    height: 6px;
+    width: 6px;
+    position: absolute;
+    left: -6px;
+    /* top: 20px; */
+    display: flex;
+    align-items: center;
+    }
+    .sub-menu p{
+        margin: 0;
+        align-items: center;
+        color: #000;
+        font-size: 16px;
+
+    }
+    .main-search{
+        display: flex;
+        position: relative;
+        transition: all 1s ;
+    }
+    .sub-search{
+        display: flex;
+        position: absolute; 
+        height: 40px;
+        width: 100px;
+        background: transparent;
+        box-sizing: border-box;
+        margin: 0;
+        border-radius: 0;
+        font: inherit;
+        overflow: visible;
+        border: none;
+        opacity: 0;
+        transition: opacity 1s;
+    } 
+    .main-search:hover .sub-search{
+        opacity: 1;
+    }
 }
 @media  (min-width: 1020px){
     .opening1{
@@ -147,7 +299,7 @@ body{
         display: inline;
             width: 100%;
             height: 350px;
-            background: rgba(192,223,255,.5411764705882353);
+            background-color: #f4efef;
             border-radius: 10px;
 }
 .opening2 h2{
@@ -1070,7 +1222,7 @@ main{
         display: flex;
         flex-direction: column;
         width: 290px;
-        height: 330px;
+        height: 360px;
         border-radius: 10px;
         border: 1px solid #f1f1f1;
     }
@@ -1338,7 +1490,7 @@ main{
 .grids{
     display: flex;
     flex-direction: column;
-    height: 250px;
+    height: 300px;
 
     border-radius: 10px;
     border: #222 solid 1px;
@@ -1351,6 +1503,7 @@ main{
     border-radius: 10px;
 }
 .grids p{
+    display: flex;
     width: 100%;
     height: 57px;
     font-weight: 500;
@@ -1371,6 +1524,10 @@ main{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+}
+.center{
+    display: flex;
+    justify-content: center;
 }
 .last h1{
     text-align: center;
